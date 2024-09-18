@@ -1,0 +1,91 @@
+/* Sidebar */
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: #3f3d56;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .sidebar-icon {
+    color: white;
+    margin: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .sidebar-icon:hover {
+    opacity: 0.7;
+  }
+  
+  /* Notification Bar */
+  .notification-bar {
+    background-color: #ffe9a6;
+    color: #4d4d4d;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Main Content */
+  .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .info-card {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .card-text {
+    max-width: 60%;
+  }
+  
+  .card-text h2 {
+    font-size: 24px;
+    color: #2f54eb;
+  }
+  
+  .card-text p {
+    margin: 10px 0;
+  }
+  
+  .connect-button {
+    background-color: #2f54eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .connect-button:hover {
+    background-color: #1d3e8e;
+  }
+  
+  .no-thanks {
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .card-image .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
