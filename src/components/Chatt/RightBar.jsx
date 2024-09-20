@@ -8,27 +8,51 @@ const ChatComponent = ({ openchat }) => {
     {
       message: "Hello! How can I assist you today?",
       sender: "bot",
-      direction: "incoming"
+      direction: "incoming",
+      timestamp: new Date().toISOString() 
     }
   ]);
+  const [chat, setChat] = useState(null);
 
   useEffect(() => {
-      axios.get("http://localhost:4000/users")
-      .then((res)=>{
-        const chatObj = res.data.find((chat)=>chat.id === openchat);
-        setMessages(chatObj.messages);
+    axios.get("http://localhost:4000/users")
+      .then((res) => {
+        const chatObj = res.data.find((chat) => chat.id === openchat);
+        if (chatObj) {
+          setMessages(chatObj.messages);
+          setChat(chatObj);
+        }
       })
-      .catch((err)=>{
-        console.log("ERr = ", err);
-      })
-  },[openchat])
+      .catch((err) => {
+        console.log("Error fetching messages: ", err);
+      });
+  }, [openchat]);
 
-  const handleSend = (message) => {
-    setMessages([...messages, { message, sender: "user", direction: "outgoing" }]);
+  const handleSend = (messageText) => {
+    const newMessage = {
+      messageId: Math.floor(Math.random() * 100000),
+      text: messageText,
+      timestamp: new Date().toISOString(),
+      sentBy: "John Doe",
+      status: "sent",
+      direction: "outgoing"
+    };
+
+    const updatedMessages = [...messages, newMessage];
+    setMessages(updatedMessages);
+    chat.messages = updatedMessages
+    
+    axios.put(`http://localhost:4000/users/${openchat}`, chat)
+      .then(() => {
+        console.log("Messages updated successfully.");
+      })
+      .catch((err) => {
+        console.log("Error updating messages: ", err);
+      });
   };
 
   return (
-    <div style={{ height: "500px", width: "700px" }}>
+    <div style={{ height: "500px", width: "750px" }}>
       <ChatContainer>
         <MessageList>
           {messages.map((msg, index) => (

@@ -19,19 +19,18 @@ const App = () => {
   return (
     
     <Router>
-      <div style={{ display: 'flex' }}>
-        
+      <div style={{ display: 'flex'}}>
         <Sidebar />
         <div style={{ marginLeft: '10px', padding: '20px' }}>
           <Routes>
             <Route path='/user' element={<Userpage />} />
-            <Route path="/" element={<Homepage />} />
-            <Route path="/chat" element={<ChatApp />} />
-            <Route path="/robot" element={<RobotPage />} />
+            {/* <Route path="/" element={<Homepage />} /> */}
+            <Route path="/chat" element={<Chats />} />
+            {/* <Route path="/robot" element={<RobotPage />} /> */}
             <Route path="/users" element={<ChatComponent /> } />
-            <Route path="/stats" element={<StatsPage />} />
-            <Route path="/settings" element={<Chats />} />
-            <Route path="/help" element={<HelpPage />} />
+            {/* <Route path="/stats" element={<StatsPage />} /> */}
+            <Route path="/settings" element={<SettingsPage />} />
+            {/* <Route path="/help" element={<HelpPage />} /> */}
           </Routes>
         </div>
       </div>

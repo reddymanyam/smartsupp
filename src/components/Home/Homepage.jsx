@@ -14,6 +14,8 @@ const FeatureCard = ({ icon, title, description }) => (
 
 export default function Homepage() {
   return (
+    <Box height='100vh' overflow='auto'>
+      
     <Container maxWidth="lg">
       <Box
         sx={{
@@ -90,6 +92,7 @@ export default function Homepage() {
         </Button>
       </Box>
     </Container>
+    </Box>
   );
 };
 

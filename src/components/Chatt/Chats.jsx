@@ -8,7 +8,7 @@ export default function Chats() {
 
     const [userData, setUserData] = useState([]);
     const [openchat, setOpenchat] = useState('');
-    const [resolvedchat, setResolvedchat] = useState('');
+   
 
     const getData = async () => {
         try {
@@ -22,18 +22,18 @@ export default function Chats() {
     };
 
     useEffect(() => {
-        getData()
+        getData();
     }, [])
 
     return (
         <Stack flexDirection="row" sx={{ height: '100vh', overflow: 'hidden' }} >
 
             <Box sx={{ width: "30%", borderRight: '1px solid #e0e0e0', overflowY: 'auto' }}>
-                <LeftBar userData={userData} setOpenchat={setOpenchat}  setResolvedchat={setResolvedchat} />
+                <LeftBar userData={userData} setOpenchat={setOpenchat} />
             </Box>
 
             <Box sx={{ width: "70%", overflowY: 'auto' }}>
-                <RightBar openchat={openchat} resolvedchat={resolvedchat}/>
+                <RightBar openchat={openchat} setOpenchat={setOpenchat} />
             </Box>
         </Stack>
 

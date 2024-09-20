@@ -7,35 +7,33 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ width: '80px', bgcolor: '#2f365f', height: 'auto', position: "relative", display: 'flex', flexDirection: 'column', justifyContent:'space-between', alignItems: 'center', paddingTop: '20px' }}>
+    <Box sx={{ width: '80px', bgcolor: '#2f365f', height: '120vh', position: "fixed", display: 'flex', flexDirection: 'column', justifyContent:'space-between', alignItems: 'center',top:0, left:0 }}>
       {/* User Icon */}
       <Stack>
         <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/user')}>
           <AccountCircle />
         </IconButton>
-        <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/')}>
+        {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/')}>
           <Home />
-        </IconButton>
+        </IconButton> */}
         <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/chat')}>
           <Chat />
         </IconButton>
-        <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/robot')}>
+        {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/robot')}>
           <SmartToy />
-        </IconButton>
-        <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/users')}>
+        </IconButton> */}
+        {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/users')}>
           <People />
-        </IconButton>
-        <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/stats')}>
+        </IconButton> */}
+        {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/stats')}>
           <BarChart />
-        </IconButton>
-      </Stack>
-      <Stack >
-        <IconButton sx={{ color: '#ffffff', margin: '150px 0 0 0' }} onClick={() => navigate('/settings')}>
+        </IconButton> */}
+        <IconButton sx={{ color: '#ffffff', margin: '10px 0 ' }} onClick={() => navigate('/settings')}>
           <Settings />
         </IconButton>
-        <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/help')}>
+        {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/help')}>
           <HelpOutline />
-        </IconButton>
+        </IconButton> */}
       </Stack>
     </Box>
   );
