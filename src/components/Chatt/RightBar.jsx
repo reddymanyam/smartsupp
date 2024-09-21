@@ -52,9 +52,9 @@ const ChatComponent = ({ openchat }) => {
   };
 
   return (
-    <div style={{ height: "500px", width: "750px" }}>
-      <ChatContainer>
-        <MessageList>
+    <div style={{ height: "500px", width: "700px" }}>
+      <ChatContainer style={{height:"580px", width:"650px"}}>
+        <MessageList style={{width:"650px"}}>
           {messages.map((msg, index) => (
             <Message
               key={msg.timestamp}
@@ -67,7 +67,7 @@ const ChatComponent = ({ openchat }) => {
             />
           ))}
         </MessageList>
-        <MessageInput placeholder="Type a message..." onSend={handleSend} />
+        <MessageInput placeholder="Type a message..." onSend={handleSend} style={{width:"650px"}} />
       </ChatContainer>
     </div>
   );

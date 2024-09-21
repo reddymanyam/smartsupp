@@ -18,7 +18,7 @@ export default function LeftBar({ userData, setOpenchat, onUserselct }) {
     };
 
     return (
-        <Box marginLeft="44px">
+        <Box >
             {/* Main Tabs for Open and Resolved */}
             <Tabs
                 value={mainTab}
@@ -32,7 +32,7 @@ export default function LeftBar({ userData, setOpenchat, onUserselct }) {
                 <Tab label="Resolved"  sx={{ fontWeight: 'bold' }} />
             </Tabs>
 
-            {/* Open Section Tabs: All, Primary, New, Mine */}
+            {/* Open Section Tabs: All, New */}
             {mainTab === 0 ?
                 <OpenChats userData={userData} setOpenchat={setOpenchat} onUserselct={onUserselct}/>
                 :
