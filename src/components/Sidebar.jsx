@@ -28,7 +28,7 @@ const Sidebar = () => {
         {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/stats')}>
           <BarChart />
         </IconButton> */}
-        <IconButton sx={{ color: '#ffffff', margin: '10px 0 ' }} onClick={() => navigate('/settings')}>
+        <IconButton sx={{ color: '#ffffff', margin: '445px 0 ' }} onClick={() => navigate('/settings')}>
           <Settings />
         </IconButton>
         {/* <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/help')}>

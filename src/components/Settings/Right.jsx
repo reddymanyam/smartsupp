@@ -1,9 +1,14 @@
 import React from 'react'
+import Userpage from '../User/Userpage';
+import ShortCuts from './ShortCuts';
 
-const Right = () => {
+const Right = ({selectedList}) => {
   return (
     <>
-        <h1>This is right comp.................................................................................................ghfghghfg gfh f dgdgh ddg dg bdgb dghbg dgb dgh g ddghfgh fghgfhfg fgh</h1>
+       
+       {selectedList === 'ShortCuts' ? <ShortCuts /> : <Userpage />
+       
+       }
     </>
   )
 }

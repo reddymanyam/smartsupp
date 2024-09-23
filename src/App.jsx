@@ -8,6 +8,7 @@ import Userpage from './components/User/Userpage';
 import Homepage from './components/Home/HomePage';
 import Chats from './components/Chatt/Chats';
 import SettingsPage from './components/Settings/SettingsPage';
+import Auth from './components/Auth/Auth';
 
 // // const HomePage = () => <div>Home Page</div>;
 // // const ChatPage = () => <div>Chat Page</div>;
@@ -20,10 +21,12 @@ const App = () => {
   return (
     
     <Router>
+      
       <div style={{ display: 'flex'}}>
         <Sidebar />
         <div style={{ marginLeft: '80px' }}>
           <Routes>
+          <Route path='/' element={<Auth />} />
             <Route path='/user' element={<Userpage />} />
             {/* <Route path="/" element={<Homepage />} /> */}
             <Route path="/chat" element={<Chats />} />

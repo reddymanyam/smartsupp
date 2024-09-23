@@ -14,17 +14,15 @@ export default function UserProfile() {
   const handleSubscriptionChange = (event) => setSubscribed(event.target.checked);
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 600, marginLeft:"250px", padding: '20px' }}>
+    <Box sx={{ width: '100%', maxWidth: 600, marginLeft:'310px'}}>
       <h2>User Profile</h2>
-      {/* Name Field */}
+    
       <InputLabel htmlFor="name" sx={{ fontWeight: 'bold', marginTop: '10px' }}>Name *</InputLabel>
       <TextField fullWidth id="name" defaultValue="Enter your Name" required sx={{ marginBottom: '15px' }} />
 
-      {/* Email Field */}
       <InputLabel htmlFor="email" sx={{ fontWeight: 'bold', marginTop: '10px' }}>Email *</InputLabel>
       <TextField fullWidth id="email" defaultValue="Enter your email" required sx={{ marginBottom: '15px' }} />
 
-      {/* Password Field */}
       <InputLabel htmlFor="password" sx={{ fontWeight: 'bold', marginTop: '10px' }}>Password</InputLabel>
       <FormControl fullWidth variant="outlined" sx={{ marginBottom: '15px' }}>
         <OutlinedInput
@@ -47,7 +45,6 @@ export default function UserProfile() {
       </FormControl>
       <Button variant="text" sx={{ textTransform: 'none' }}>Change password</Button>
 
-      {/* Dashboard Language Selection */}
       <InputLabel htmlFor="language" sx={{ fontWeight: 'bold', marginTop: '10px' }}>Dashboard Language</InputLabel>
       <FormControl fullWidth sx={{ marginBottom: '15px' }}>
         <Select
@@ -61,7 +58,6 @@ export default function UserProfile() {
         </Select>
       </FormControl>
 
-      {/* Description Field */}
       <InputLabel htmlFor="description" sx={{ fontWeight: 'bold', marginTop: '10px' }}>Description</InputLabel>
       <TextField
         id="description"
@@ -73,7 +69,6 @@ export default function UserProfile() {
         sx={{ marginBottom: '15px' }}
       />
 
-      {/* Subscription */}
       <FormControlLabel
         control={
           <Checkbox checked={subscribed} onChange={handleSubscriptionChange} color="primary" />
@@ -82,7 +77,6 @@ export default function UserProfile() {
         sx={{ marginBottom: '15px' }}
       />
 
-      {/* Save Button */}
       <Button variant="contained" color="primary" fullWidth>
         Save
       </Button>
