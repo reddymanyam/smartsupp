@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Left from './Left'
 import Right from './Right'
 import { Stack } from '@mui/material'
 import Divider from '@mui/material/Divider';
 
 const SettingsPage = () => {
+
+   const [listData, setListData] = useState('');
+
+   const handleSelect = (item) =>{
+    setListData(item)
+   }
     return (
         <>
 

@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const Left = () => {
+const Left = ({ onItemClick }) => {
   return (
-   
-       <>
-           <h1>This is a left comp...</h1>
-       
-       </>
-    
-  )
-}
+    <>
+      <ul>
+        <li onClick={() => onItemClick('user')}>User</li>
+        <li onClick={() => onItemClick('notifications')}>Notifications</li>
+        <li onClick={() => onItemClick('profile')}>Profile</li>
+      </ul>
+    </>
+  );
+};
 
-export default Left
+export default Left;
+

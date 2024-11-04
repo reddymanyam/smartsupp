@@ -1,11 +1,22 @@
-import React from 'react'
+import React from 'react';
+import Userpage from '../User/Userpage'
 
-const Right = () => {
-  return (
-    <>
-        <h1>This is right comp.................................................................................................ghfghghfg gfh f dgdgh ddg dg bdgb dghbg dgb dgh g ddghfgh fghgfhfg fgh</h1>
-    </>
-  )
-}
+const Right = ({ selectedItem }) => {
+  const renderContent = () => {
+    switch (selectedItem) {
+      case 'user':
+        return <div><Userpage /></div>;
+      case 'notifications':
+        return <div>Notifications Content</div>;
+      case 'profile':
+        return <div>Profile Content</div>;
+      default:
+        return <div>Please select an item from the list.</div>;
+    }
+  };
 
-export default Right
+  return <>{renderContent()}</>;
+};
+
+export default Right;
+
