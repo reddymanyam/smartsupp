@@ -15,7 +15,7 @@ const ChatComponent = ({ openchat }) => {
   const [chat, setChat] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/users")
+    axios.get("http://localhost:8000/users")
       .then((res) => {
         const chatObj = res.data.find((chat) => chat.id === openchat);
         if (chatObj) {
@@ -42,7 +42,7 @@ const ChatComponent = ({ openchat }) => {
     setMessages(updatedMessages);
     chat.messages = updatedMessages
     
-    axios.put(`http://localhost:4000/users/${openchat}`, chat)
+    axios.put(`http://localhost:8000/users/${openchat}`, chat)
       .then(() => {
         console.log("Messages updated successfully.");
       })
