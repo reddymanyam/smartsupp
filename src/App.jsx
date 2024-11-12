@@ -11,12 +11,6 @@ import SettingsPage from './components/Settings/SettingsPage';
 import Auth from './components/Auth/Auth';
 import { Stack } from '@mui/material';
 
-// // const HomePage = () => <div>Home Page</div>;
-// // const ChatPage = () => <div>Chat Page</div>;
-// const RobotPage = () => <div>Robot Page</div>;
-// const StatsPage = () => <div>Stats Page</div>;
-// // const SettingsPage = () => <div>Settings Page</div>;
-// const HelpPage = () => <div>Help Page</div>;
 
 const UserRapper = () => {
   return (
