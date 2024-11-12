@@ -12,7 +12,7 @@ export default function Chats() {
 
     const getData = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/users");
+            const response = await axios.get("http://localhost:8000/users");
             const data = response.data;
             console.log("Api data = ", data)
             setUserData(data);
