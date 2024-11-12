@@ -41,6 +41,7 @@ function a11yProps(index) {
 export default function Auth() {
     const [value, setValue] = React.useState(0);
     const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("")
     const [password, setPassword] = React.useState("");
     const [confirmPassword, SetConfirmPassword] = React.useState("");
 
@@ -48,6 +49,15 @@ export default function Auth() {
         setValue(newValue);
     };
 
+    const handleSignUp = async(e) => {
+        e.preventDefault();
+        console.log("signup working")
+    }
+
+    const handleLogin = async(e) => {
+        e.preventDefault();
+        console.log("login working")
+    }
     return (
         <Box
             sx={{
@@ -55,12 +65,13 @@ export default function Auth() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: '100vh',
-                backgroundColor: '#f5f5f5',
-                width: "1260px"
+                width: '100%',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
             }}
         >
-            <Paper elevation={6} sx={{ padding: 4, borderRadius: 2, width: '400px' }}>
-                <Card sx={{ width: '100%' }}>
+            <Paper elevation={6} sx={{ borderRadius: 2, width: '400px' }}>
+                <Card sx={{ padding: 4, width: '100%' }}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" variant="fullWidth" >
                             <Tab label="SignUp" {...a11yProps(0)} />
@@ -73,6 +84,8 @@ export default function Auth() {
                             id="name-input"
                             label="Enter your Name"
                             variant="filled"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                             fullWidth
                             required
                             sx={{ mb: 2, mt: 2 }}
@@ -81,6 +94,8 @@ export default function Auth() {
                             id="email-input-login"
                             label="Enter your Email"
                             variant="filled"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             fullWidth
                             required
                             sx={{ mb: 2 }}
@@ -89,6 +104,8 @@ export default function Auth() {
                             id="password-input-login"
                             label="Enter your Password"
                             variant="filled"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             fullWidth
                             required
                             type="password"
@@ -98,13 +115,15 @@ export default function Auth() {
                             id="confirm-password-input"
                             label="Confirm your Password"
                             variant="filled"
+                            value={confirmPassword}
+                            onChange={(e) => SetConfirmPassword(e.target.value)}
                             fullWidth
                             required
                             type="password"
                             sx={{ mb: 2 }}
                         />
-                        <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-                            <Button variant="contained" sx={{ width: '150px', mb:2 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button variant="contained" sx={{ width: '150px', mb: 2 }} onClick={handleSignUp}>
                                 SignUp
                             </Button>
                         </Box>
@@ -115,6 +134,8 @@ export default function Auth() {
                             id="email-input-signup"
                             label="Enter your Email"
                             variant="filled"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             fullWidth
                             required
                             sx={{ mb: 2, mt: 2 }}
@@ -123,15 +144,17 @@ export default function Auth() {
                             id="password-input-signup"
                             label="Enter your Password"
                             variant="filled"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             fullWidth
                             required
                             type="password"
                         />
-                       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
-          <Button variant="contained" sx={{ width: '150px', mb:2  }}>
-            Login
-          </Button>
-        </Box>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+                            <Button variant="contained" sx={{ width: '150px', mb: 2 }} onClick={handleLogin}>
+                                Login
+                            </Button>
+                        </Box>
                     </CustomTabPanel>
                 </Card>
             </Paper>

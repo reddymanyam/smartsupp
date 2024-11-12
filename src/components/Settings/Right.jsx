@@ -6,9 +6,7 @@ const Right = ({selectedList}) => {
   return (
     <>
        
-       {selectedList === 'ShortCuts' ? <ShortCuts /> : <Userpage />
-       
-       }
+       {selectedList === 'ShortCuts' ? <ShortCuts /> : <Userpage />}
     </>
   )
 }

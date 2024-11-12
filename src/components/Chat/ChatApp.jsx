@@ -1,4 +1,3 @@
-// ChatApp.jsx
 import React, { useState } from 'react';
 import ChatWindow from './ChatWindow';
 import ChatPersonIcons from './ChatPersonIcons';

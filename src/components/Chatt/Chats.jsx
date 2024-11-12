@@ -26,13 +26,13 @@ export default function Chats() {
     }, [])
 
     return (
-        <Stack flexDirection="row" sx={{ height: '100vh', overflow: 'hidden' }} >
+        <Stack flexDirection="row" sx={{ height: '100vh', width:"100%", marginLeft:"7%" }} >
 
-            <Box sx={{ width: "30%", borderRight: '1px solid #e0e0e0', overflowY: 'auto' }}>
+            <Box sx={{ width: "20%", borderRight: '1px solid #e0e0e0' }}>
                 <LeftBar userData={userData} setOpenchat={setOpenchat} />
             </Box>
 
-            <Box sx={{ width: "70%", overflowY: 'auto' }}>
+            <Box sx={{ width: "80%", overflowY: 'auto' }}>
                 <RightBar openchat={openchat} setOpenchat={setOpenchat} />
             </Box>
         </Stack>

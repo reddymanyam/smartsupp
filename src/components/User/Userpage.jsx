@@ -14,7 +14,7 @@ export default function UserProfile() {
   const handleSubscriptionChange = (event) => setSubscribed(event.target.checked);
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 600, marginLeft:'310px'}}>
+    <Box sx={{ width: '100%', marginLeft:"7%"}}>
       <h2>User Profile</h2>
     
       <InputLabel htmlFor="name" sx={{ fontWeight: 'bold', marginTop: '10px' }}>Name *</InputLabel>

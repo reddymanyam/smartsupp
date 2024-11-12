@@ -8,23 +8,21 @@ import ListItemText from '@mui/material/ListItemText';
 import PersonOutlineRoundedIcon from '@mui/icons-material/PersonOutlineRounded';
 import FlashOnRoundedIcon from '@mui/icons-material/FlashOnRounded';
 
-export default function Left({handleSelectList, color}) {
+export default function Left({handleSelectList, selectedList}) {
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <nav aria-label="main mailbox folders">
         <List >
           <ListItem disablePadding>
-            <ListItemButton onClick={()=>{handleSelectList('Profile')}}>
+            <ListItemButton onClick={()=>{handleSelectList('Profile')}} style={{backgroundColor: selectedList === 'Profile'? "lightblue":"transparent" }}>
               <ListItemIcon>
                 <PersonOutlineRoundedIcon />
               </ListItemIcon>
               <ListItemText primary="Profile" primaryTypographyProps={{ sx: {fontWeight:'bold'}}}  />
-               
-              
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={()=>{handleSelectList('ShortCuts')}}>
+            <ListItemButton onClick={()=>{handleSelectList('ShortCuts')}} style={{backgroundColor: selectedList === "ShortCuts" ? "lightblue" :"transparent"}}>
               <ListItemIcon>
                 <FlashOnRoundedIcon />
               </ListItemIcon>

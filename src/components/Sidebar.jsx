@@ -7,7 +7,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ width: '80px', bgcolor: '#2f365f', height: '120vh', position: "fixed", display: 'flex', flexDirection: 'column', justifyContent:'space-between', alignItems: 'center',top:0, left:0 }}>
+    <Box sx={{ width: '7%', bgcolor: '#2f365f', height: '120vh', position: "fixed", display: 'flex', flexDirection: 'column', justifyContent:'space-between', alignItems: 'center',top:0, left:0 }}>
       {/* User Icon */}
       <Stack>
         <IconButton sx={{ color: '#ffffff', margin: '10px 0' }} onClick={() => navigate('/user')}>
