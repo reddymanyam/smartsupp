@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box, Tabs, Tab } from '@mui/material';
 import OpenChats from './OpenChats';
 import ResolvedChats from './ResolvedChats';
-// import ResolvedChats from './ResolvedChats';
 
 export default function LeftBar({ userData, setOpenchat, onUserselct }) {
 

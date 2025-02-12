@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Userpage from '../User/Userpage'
 
@@ -19,4 +20,18 @@ const Right = ({ selectedItem }) => {
 };
 
 export default Right;
+=======
+import React from 'react'
+import Userpage from '../User/Userpage';
+import ShortCuts from './ShortCuts';
+
+const Right = ({selectedList}) => {
+  return (
+    <>
+       
+       {selectedList === 'ShortCuts' ? <ShortCuts /> : <Userpage />}
+    </>
+  )
+}
+>>>>>>> 181c33a550e00a88c6673a059a4cf442f753bf97
 

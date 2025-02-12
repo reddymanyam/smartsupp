@@ -22,6 +22,22 @@
           "sentBy": "John Doe",
           "status": "sent",
           "direction": "outgoing"
+        },
+        {
+          "messageId": 74652,
+          "text": "hello",
+          "timestamp": "2024-12-30T10:11:37.942Z",
+          "sentBy": "John Doe",
+          "status": "sent",
+          "direction": "outgoing"
+        },
+        {
+          "messageId": 97386,
+          "text": "uii u",
+          "timestamp": "2024-12-30T10:11:46.606Z",
+          "sentBy": "John Doe",
+          "status": "sent",
+          "direction": "outgoing"
         }
       ]
     },
@@ -47,6 +63,7 @@
           "sentBy": "Jane Smith",
           "status": "read",
           "direction": "incoming"
+<<<<<<< HEAD
         },
         {
           "messageId": 212059,
@@ -87,6 +104,8 @@
           "sentBy": "John Doe",
           "status": "sent",
           "direction": "outgoing"
+=======
+>>>>>>> 181c33a550e00a88c6673a059a4cf442f753bf97
         }
       ]
     }

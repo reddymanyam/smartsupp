@@ -1,4 +1,3 @@
-// ChatWindow.jsx
 import React, { useState } from 'react';
 import { TextField, Button, Paper, Typography, Box } from '@mui/material';
 

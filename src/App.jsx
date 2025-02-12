@@ -8,23 +8,33 @@ import Userpage from './components/User/Userpage';
 import Homepage from './components/Home/HomePage';
 import Chats from './components/Chatt/Chats';
 import SettingsPage from './components/Settings/SettingsPage';
+import Auth from './components/Auth/Auth';
+import { Stack } from '@mui/material';
 
-// // const HomePage = () => <div>Home Page</div>;
-// // const ChatPage = () => <div>Chat Page</div>;
-// const RobotPage = () => <div>Robot Page</div>;
-// const StatsPage = () => <div>Stats Page</div>;
-// // const SettingsPage = () => <div>Settings Page</div>;
-// const HelpPage = () => <div>Help Page</div>;
+
+const UserRapper = () => {
+  return (
+    <Stack justifyContent='center' alignItems='center'  >
+      <Stack width='80%' justifyContent='center' alignItems='center'>
+        <Userpage />
+      </Stack>
+    </Stack>
+  )
+}
 
 const App = () => {
   return (
-    
+
     <Router>
-      <div style={{ display: 'flex'}}>
-        <Sidebar />
-        <div style={{ marginLeft: '80px' }}>
+ 
+      <div style={{ width: "100%", gap:"2%" }}>
+        <div style={{width:"7%"}}>
+          <Sidebar />
+        </div>
+        <div style={{ width: "93%" }}>
           <Routes>
-            <Route path='/user' element={<Userpage />} />
+            <Route path='/' element={<Auth />} />
+            <Route path='/user' element={<UserRapper />} />
             {/* <Route path="/" element={<Homepage />} /> */}
             <Route path="/chat" element={<Chats />} />
             {/* <Route path="/robot" element={<RobotPage />} /> */}
